@@ -1,0 +1,34 @@
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    width: 200rpx;
+    margin: 200rpx auto 50rpx;
+    position: relative;
+    text-align: center;
+
+    image {
+        width: 200rpx;
+        height: auto;
+    }
+
+    .avatar {
+        width: 132rpx;
+        height: 132rpx;
+        display: inline-block;
+    }
+}
+
+.text-area {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    font-size: 36rpx;
+    color: #8f8f94;
+}
