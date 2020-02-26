@@ -2,13 +2,13 @@
     "pages": [{
         "path": "pages/home/index",
         "style": {
-            "navigationStyle": "custom",
-            "enablePullDownRefresh": true
+            "navigationStyle": "custom"
         }
     }, {
         "path": "pages/lock/index",
         "style": {
-            "navigationStyle": "custom"
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": true
         }
     }, {
         "path": "pages/account/index",

@@ -1,4 +1,40 @@
 .wrap {
     text-align: center;
-    margin: upx(100) auto upx(25);
+    position: relative;
+
+    .tab {
+        height: upx(40);
+        line-height: upx(40);
+        border-top: 1px solid #E4E4E4;
+        border-bottom: 1px solid #E4E4E4;
+        background: #fff;
+        text-align: center;
+        display: flex;
+        justify-content: space-around;
+        position: relative;
+        z-index: 2;
+
+        .tab-item {
+            color: #0e0e0e;
+            font-size: upx(12);
+
+            &.active {
+                font-weight: bold;
+            }
+        }
+    }
+
+    scroll-view {
+        position: fixed;
+        z-index: 1;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+
+        &.scrollTop {
+            height: auto;
+        }
+    }
 }

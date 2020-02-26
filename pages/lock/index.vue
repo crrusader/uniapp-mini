@@ -6,7 +6,7 @@
     </block>
     <block v-else>
         <view>
-            <text>隐藏的内容啊</text>
+            <text>可爱的小粽子啊</text>
         </view>
     </block>
 </view>
@@ -22,7 +22,8 @@ export default {
         }
     },
     onLoad() {},
-    onShow() {
+    onShow() {},
+    onHide() {
         this.hide = true
         this.pwd = ''
     },
