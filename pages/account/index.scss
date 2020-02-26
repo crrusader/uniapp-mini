@@ -6,29 +6,47 @@
 }
 
 .logo {
-    width: 200rpx;
-    margin: 200rpx auto 50rpx;
+    width: upx(100);
+    margin: upx(100) auto upx(25);
     position: relative;
     text-align: center;
 
     image {
-        width: 200rpx;
+        width: upx(100);
         height: auto;
+        position: relative;
+        z-index: 2;
     }
 
     .avatar {
-        width: 132rpx;
-        height: 132rpx;
-        display: inline-block;
+        position: absolute;
+        z-index: 1;
+        left: 50%;
+        top: upx(17);
+        transform: translateX(-50%);
+
+        .avatar-data {
+            width: upx(57);
+            height: upx(57);
+            display: inline-block;
+            border-radius: 50%;
+            overflow: hidden;
+        }
     }
 }
 
 .text-area {
     display: flex;
     justify-content: center;
-}
 
-.title {
-    font-size: 36rpx;
-    color: #8f8f94;
+    .title {
+        font-size: upx(16);
+        color: #333;
+        margin-right: upx(8);
+    }
+
+    .nickname {
+        font-size: upx(16);
+        color: #333;
+    }
 }

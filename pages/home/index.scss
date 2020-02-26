@@ -1,18 +1,4 @@
-.content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    width: 200rpx;
-    margin: 200rpx auto 50rpx;
-    position: relative;
+.wrap {
     text-align: center;
-
-    image {
-        width: 200rpx;
-        height: auto;
-    }
+    margin: upx(100) auto upx(25);
 }

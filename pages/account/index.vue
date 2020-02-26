@@ -2,12 +2,13 @@
 <view class="content">
     <view class="logo">
         <image src="https://gw.alicdn.com/tps/TB1W_X6OXXXXXcZXVXXXXXXXXXX-400-400.png" mode="widthFix"></image>
-        <open-data type="userAvatarUrl" class="avatar"></open-data>
+        <view class="avatar">
+            <open-data type="userAvatarUrl" class="avatar-data"></open-data>
+        </view>
     </view>
     <view class="text-area">
-        <i class="iconfont iconfree-shipping"></i>
         <text class="title">{{title}}</text>
-        <open-data type="userNickName"></open-data>
+        <open-data type="userNickName" class="nickname"></open-data>
     </view>
 </view>
 </template>
@@ -19,7 +20,7 @@ export default {
             title: 'Hello'
         }
     },
-    onLoad(options) {},
+    onLoad() {},
     onShow() {},
     methods: {}
 }

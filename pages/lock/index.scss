@@ -1,0 +1,13 @@
+.wrap {
+    text-align: center;
+    margin: upx(100) upx(16) upx(25);
+
+    > text {}
+
+    > input {
+        border: 1px solid #eee;
+        margin-top: upx(16);
+        line-height: 30px;
+        height: 32px;
+    }
+}

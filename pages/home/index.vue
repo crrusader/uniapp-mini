@@ -1,9 +1,5 @@
 <template>
-<view class="content">
-    <view class="logo">
-        <image src="https://gw.alicdn.com/tps/TB1W_X6OXXXXXcZXVXXXXXXXXXX-400-400.png" mode="widthFix"></image>
-    </view>
-</view>
+<view class="wrap"></view>
 </template>
 
 <script>
@@ -13,10 +9,10 @@ export default {
             title: 'Hello'
         }
     },
-    onLoad() {},
-    onShow() {
+    onLoad() {
         this.getJoke()
     },
+    onShow() {},
     methods: {
         async getJoke() {
             let res = await this.$store.dispatch('Home/getJoke', {
