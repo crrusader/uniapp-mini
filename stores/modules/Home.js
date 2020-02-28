@@ -71,6 +71,7 @@ export default {
                 page: state.page,
                 count: state.count,
                 type: state.type,
+                ...data,
             })
             // concat下一页的数据
             if (res.data && res.data.code == 200 && res.data.result && res.data.result.length) {

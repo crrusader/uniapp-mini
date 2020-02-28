@@ -49,7 +49,7 @@ export default {
                     name: "文字",
                     status: "text",
                 },
-            ]
+            ],
         }
     },
     components: {

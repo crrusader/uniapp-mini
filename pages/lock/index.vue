@@ -23,6 +23,7 @@ export default {
             pwd: '',
             hide: true,
             sweet: [],
+            timer: null,
         }
     },
     onLoad() {},
@@ -30,13 +31,14 @@ export default {
     onHide() {
         this.hide = true
         this.pwd = ''
+        this.timer && clearInterval(this.timer)
     },
     methods: {
         async confirm() {
             if (this.pwd == '123456') {
                 this.hide = false
-                setInterval(async () => {
-                    let res = await this.$store.dispatch('Api/getLoveWord')
+                this.timer = setInterval(async () => {
+                    let res = await this.$store.dispatch('Api/getLoveWord') // 接口调不通 未接入icp备案
                     this.sweet.push(res.data)
                 }, 2000)
             }

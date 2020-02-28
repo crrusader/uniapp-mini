@@ -81,5 +81,10 @@ $uni-font-size-paragraph:30upx;
 }
 
 @function upx($px) {
-  @return $px * 2upx;
+    @return $px * 2upx;
+}
+
+view, text, input, image, video, scroll-view {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
