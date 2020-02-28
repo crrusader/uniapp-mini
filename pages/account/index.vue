@@ -20,7 +20,10 @@ export default {
             title: 'Hello'
         }
     },
-    onLoad() {},
+    onLoad() {
+        this.$store.dispatch('Api/getWallpaper')
+        this.$store.dispatch('Api/getRandomSong')
+    },
     onShow() {},
     methods: {}
 }

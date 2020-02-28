@@ -1,6 +1,14 @@
 .wrap {
     text-align: center;
-    margin: upx(100) upx(16) upx(25);
+    padding: upx(100) upx(16) upx(25);
+
+    .top {
+        position: fixed;
+        top: 0;
+        background: #fff;
+        height: upx(80);
+        width: 100%;
+    }
 
     > text {}
 

@@ -4,7 +4,7 @@ export default {
     state: {
         page: 1,
         count: 20,
-        type: 'all',
+        type: 'all', // all,video,image,gif,text
         scrollTop: false,
         list: [],
     },
@@ -30,6 +30,7 @@ export default {
         },
     },
     actions: {
+        // 按照参数获取笑话
         async getJoke({
             dispatch,
             commit,
@@ -57,6 +58,7 @@ export default {
             }, 60)
             return res
         },
+        // 按照参数获取分页笑话
         async getNextJoke({
             dispatch,
             commit,
@@ -74,6 +76,23 @@ export default {
             if (res.data && res.data.code == 200 && res.data.result && res.data.result.length) {
                 commit('pushList', res.data.result)
             }
+            return res
+        },
+        /**
+         * 获取随机的数量可指定的笑话
+         * 不传page则会获取到随机的笑话
+         */
+        async getRandomJoke({
+            dispatch,
+            commit,
+            state,
+            rootState,
+        }, data) {
+            let res = await rootState.getRequest(api.joke, {
+                count: state.count,
+                type: state.type,
+                ...data,
+            })
             return res
         },
     },
