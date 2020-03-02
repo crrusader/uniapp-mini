@@ -20,9 +20,20 @@ export default {
             title: 'Hello'
         }
     },
-    onLoad() {
+    async onLoad() {
         this.$store.dispatch('Api/getWallpaper')
-        this.$store.dispatch('Api/getRandomSong')
+        // 设置背景音乐
+        let res = await this.$store.dispatch('Api/getRandomSong')
+        let music = res && res.data && res.data.data
+        // 歌手：music.artistsname
+        wx.playBackgroundAudio({
+            dataUrl: music.url,
+            title: music.name,
+            coverImgUrl: music.picurl,
+            fail: function(a) {
+                console.log(a);
+            },
+        })
     },
     onShow() {},
     methods: {}

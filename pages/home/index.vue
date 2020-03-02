@@ -1,6 +1,6 @@
 <template>
 <view class="wrap custom-status-bar">
-    <view class="tab">
+    <view class="tab" :style="{top: `${navbarheight + statusBarHeight}px`}">
         <view v-for="(item,index) in tabs" :key="index" @click="setStatus(item.status)" :class="['tab-item',{ active: item.status === status }]">
             {{item.name}}
         </view>
@@ -22,13 +22,16 @@ import {
 } from "vuex";
 
 import jokeList from "@/components/page-components/home/jokelist/index";
+import safeArea from "@/components/common/mixins/safe-area";
 
 export default {
+    mixins: [safeArea()],
     data() {
         return {
             title: 'Hello',
             status: 'all',
             fixedTop: 64,
+            navbarheight: 44, // 小程序右上角占据高度
             tabs: [{
                     name: "全部类型",
                     status: "all",

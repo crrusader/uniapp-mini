@@ -25,6 +25,7 @@
             }
         }]
     }],
+    "requiredBackgroundModes": ["audio"],
     "preloadRule": {
         "pages/home/index": {
             "network": "all",
