@@ -37,28 +37,22 @@
         "color": "#8a8a8a",
         "selectedColor": "#000",
         "list": [{
-                "text": "首页",
+                "text": "",
                 "pagePath": "pages/home/index",
-                "iconPath": "static/home.png",
-                "selectedIconPath": "static/home_select.png"
+                "iconPath": "static/heart-fill.png",
+                "selectedIconPath": "static/heart-fill-active.png"
             },
-            /*{
-                "text": "副本1",
-                "pagePath": "pages/home/index",
-                "iconPath": "static/wind-cry.png",
-                "selectedIconPath": "static/wind-smile.png"
-            },*/
             {
-                "text": "锁定",
+                "text": "",
                 "pagePath": "pages/lock/index",
-                "iconPath": "static/unlock.png",
-                "selectedIconPath": "static/lock.png"
+                "iconPath": "static/heart-fill.png",
+                "selectedIconPath": "static/heart-fill-active.png"
             },
             {
-                "text": "我的",
+                "text": "",
                 "pagePath": "pages/account/index",
-                "iconPath": "static/user plus-fill.png",
-                "selectedIconPath": "static/user-fill.png"
+                "iconPath": "static/heart-fill.png",
+                "selectedIconPath": "static/heart-fill-active.png"
             }
         ],
         "position": "bottom"
