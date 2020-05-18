@@ -1,5 +1,5 @@
 <template>
-<view class="joke-list">
+<view class="joke-list" v-if="false">
     <view v-for="(item,index) in list" :key="item.sid" class="joke-list-wrap">
         <view>类型：{{item.type}}</view>
         <view v-if="item.header" class="header">

@@ -1,52 +1,38 @@
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.logo {
-    width: upx(100);
-    margin: upx(100) auto upx(25);
-    position: relative;
-    text-align: center;
-
-    image {
-        width: upx(100);
-        height: auto;
+    .wrapper {
+        min-height: 100vh;
+        background: pink;
+        font-size: 0;
         position: relative;
-        z-index: 2;
-    }
+        background-image: url('https://www.assdrty.com/images/2020/05/16/0077qhzWly1fq7tvv7yipg30dc0loqv6.gif');
+        background-attachment: fixed;
 
-    .avatar {
-        position: absolute;
-        z-index: 1;
-        left: 50%;
-        top: upx(17);
-        transform: translateX(-50%);
-
-        .avatar-data {
-            width: upx(57);
-            height: upx(57);
-            display: inline-block;
-            border-radius: 50%;
-            overflow: hidden;
+        .navbar {
+            padding-top: 64px;
+            text-align: center;
+            width: 100%;
+            font-size: 28upx;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
         }
-    }
-}
 
-.text-area {
-    display: flex;
-    justify-content: center;
+        .album {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40upx 40upx 0;
 
-    .title {
-        font-size: upx(16);
-        color: #333;
-        margin-right: upx(8);
-    }
+            .imgwrap {
+                width: 200upx;
+                height: 200upx;
+                margin-bottom: 36upx;
 
-    .nickname {
-        font-size: upx(16);
-        color: #333;
+                .poster {
+                    width: 200upx;
+                    height: 200upx;
+                }
+            }
+        }
     }
 }

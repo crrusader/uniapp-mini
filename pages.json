@@ -1,5 +1,10 @@
 {
     "pages": [{
+        "path": "pages/welcome/index",
+        "style": {
+            "navigationStyle": "custom"
+        }
+    }, {
         "path": "pages/home/index",
         "style": {
             "navigationStyle": "custom"
@@ -7,8 +12,7 @@
     }, {
         "path": "pages/lock/index",
         "style": {
-            "navigationStyle": "custom",
-            "enablePullDownRefresh": true
+            "navigationStyle": "custom"
         }
     }, {
         "path": "pages/account/index",
@@ -20,6 +24,16 @@
         "root": "subpkgs",
         "pages": [{
             "path": "test/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        }, {
+            "path": "welcome/index",
+            "style": {
+                "navigationStyle": "custom"
+            }
+        }, {
+            "path": "animate/index",
             "style": {
                 "navigationStyle": "custom"
             }
@@ -37,24 +51,21 @@
         "color": "#8a8a8a",
         "selectedColor": "#000",
         "list": [{
-                "text": "",
-                "pagePath": "pages/home/index",
-                "iconPath": "static/heart-fill.png",
-                "selectedIconPath": "static/heart-fill-active.png"
-            },
-            {
-                "text": "",
-                "pagePath": "pages/lock/index",
-                "iconPath": "static/heart-fill.png",
-                "selectedIconPath": "static/heart-fill-active.png"
-            },
-            {
-                "text": "",
-                "pagePath": "pages/account/index",
-                "iconPath": "static/heart-fill.png",
-                "selectedIconPath": "static/heart-fill-active.png"
-            }
-        ],
+            "text": "蒋",
+            "pagePath": "pages/home/index",
+            "iconPath": "static/heart-fill.png",
+            "selectedIconPath": "static/heart-fill-active.png"
+        }, {
+            "text": "隽",
+            "pagePath": "pages/lock/index",
+            "iconPath": "static/heart-fill.png",
+            "selectedIconPath": "static/heart-fill-active.png"
+        }, {
+            "text": "瑜",
+            "pagePath": "pages/account/index",
+            "iconPath": "static/heart-fill.png",
+            "selectedIconPath": "static/heart-fill-active.png"
+        }],
         "position": "bottom"
     },
     "globalStyle": {

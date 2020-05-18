@@ -1,21 +1,38 @@
-.wrap {
-    text-align: center;
-    padding: upx(100) upx(16) upx(25);
+.content {
+    .wrapper {
+        min-height: 100vh;
+        background: pink;
+        font-size: 0;
+        position: relative;
+        background-image: url('https://www.assdrty.com/images/2020/05/16/0077qhzWly1fq7tvv7yipg30dc0loqv6.gif');
+        background-attachment: fixed;
 
-    .top {
-        position: fixed;
-        top: 0;
-        background: #fff;
-        height: upx(80);
-        width: 100%;
-    }
+        .navbar {
+            padding-top: 64px;
+            text-align: center;
+            width: 100%;
+            font-size: 28upx;
+            font-weight: bold;
+            font-style: italic;
+            text-decoration: underline;
+        }
 
-    > text {}
+        .album {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 40upx 40upx 0;
 
-    > input {
-        border: 1px solid #eee;
-        margin-top: upx(16);
-        line-height: 30px;
-        height: 32px;
+            .imgwrap {
+                width: 200upx;
+                height: 200upx;
+                margin-bottom: 36upx;
+
+                .poster {
+                    width: 200upx;
+                    height: 200upx;
+                }
+            }
+        }
     }
 }

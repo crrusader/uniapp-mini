@@ -2,29 +2,6 @@
     text-align: center;
     position: relative;
 
-    .tab {
-        height: upx(40);
-        line-height: upx(40);
-        border-top: 1px solid #E4E4E4;
-        border-bottom: 1px solid #E4E4E4;
-        background: #fff;
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
-        width: 100%;
-        z-index: 2;
-
-        .tab-item {
-            color: #0e0e0e;
-            font-size: upx(12);
-
-            &.active {
-                font-weight: bold;
-            }
-        }
-    }
-
     scroll-view {
         position: fixed;
         z-index: 1;
@@ -32,9 +9,37 @@
         width: 100%;
         top: 0;
         left: 0;
-
-        &.scrollTop {
-            height: auto;
-        }
     }
+}
+// .navbar {
+//     text-align: center;
+//     width: 100%;
+//     font-size: 28upx;
+//     font-weight: bold;
+//     font-style: italic;
+//     text-decoration: underline;
+// }
+
+.navbar {
+    position: fixed;
+    top: 64px;
+    background: #fff;
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+    font-size: 28upx;
+}
+
+.container {
+    padding: 0 30upx;
+    font-size: 28upx;
+
+    .title {
+      text-align: left;
+    }
+
+    .content {}
 }
