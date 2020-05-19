@@ -2,7 +2,7 @@
 <view class="content">
     <view class="wrapper">
         <view class="navbar">
-            你心里有人吗 没人我就进来了
+            宝贝生日快乐，这是我和你一起的合照哦~
         </view>
         <view class="album">
             <block v-for="(item,index) in albumList" :key="index">

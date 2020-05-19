@@ -1,7 +1,7 @@
 <template>
 <view class="content">
-    <view class="wrapper">
-        <button type="button" name="button" class="btn btn2">送给我的小公主</button>
+    <view class="wrapper" :class="{'opacity': hide}">
+        <button type="button" name="button" class="btn btn2">送给我的小仙女</button>
         <swiper class="swiper" circular="true" next-margin="30px" previous-margin="30px" @change="swiperchange">
             <block v-for="(item,index) in imglist" :key="index">
                 <swiper-item class="swiper-item">
@@ -9,7 +9,7 @@
                 </swiper-item>
             </block>
         </swiper>
-        <button type="button" name="button" class="btn" v-show="btnshow" @click="goHome">后面还有呢~</button>
+        <button type="button" name="button" class="btn" v-show="btnshow" @click="goHome">打开后续~</button>
     </view>
 </view>
 </template>
@@ -19,6 +19,7 @@ export default {
     data() {
         return {
             current: 0,
+            hide: false,
             btnshow: false,
             background: 'https://www.assdrty.com/images/2020/05/16/0077qhzWly1fq7tvv7yipg30dc0loqv6.gif',
             imglist: [],
@@ -26,33 +27,44 @@ export default {
                 src: "https://m.qpic.cn/psc?/V12Q4QsT06MLFa/*.mI3yPYPF*NtvOuCb0eDPOBGhMSOQbzdabVjotb62RUc7StbJDkikfsh1a1.s4W9wDhEbfbxlTSvoaC.SU2yg!!/b&bo=OARUBgAAAAARB14!&rf=viewer_4",
                 text: "小宝太美了"
             }, {
-                src: "https://m.qpic.cn/psc?/V12Q4QsT06MLFa/Mh4X5JDG18yu8hANyA15N99ASgHo43w2RmLzr0B6dvVLQAjMrcLIFkMFVQoBE256rvseaxTKRuwwsb1tBzAXlJUyjZsaqhjL46AZOX0LuO8!/b&bo=PgTEAgAAAAARF9w!&rf=viewer_4",
-                text: "这张照片太有感觉了~"
-            }, {
                 src: "https://m.qpic.cn/psc?/V12Q4QsT06MLFa/*.mI3yPYPF*NtvOuCb0eDDoB.mz0MdfhfsHbQM2nY3sJSB*VyxwyzHfJ0YOaesK5mPM9iKSx8yN1Iw0Ti.FIWg!!/b&bo=IgIwAwAAAAARByM!&rf=viewer_4",
                 text: "我们要一直走下去哦"
-            }, {
-                src: "https://m.qpic.cn/psc?/V12Q4QsT35EKsy/Mh4X5JDG18yu8hANyA15N79.rEakkkLcLesD0rUvi3wJJ8tbWWK1BFq7wSft6yAphrz8GsVtw9biThgncE6nhlVxbo1YkACRDiqDmJDBpt4!/b&bo=YASQBgAAAAARF9I!&rf=viewer_4",
-                text: "搂着你的小蛮腰"
             }, {
                 src: "https://m.qpic.cn/psc?/V12Q4QsT06MLFa/Mh4X5JDG18yu8hANyA15N2gXsdGIPWdAWpADxZusRc1ad65FU5ifq7BjHiiQyCopoGhyDuCgjs8xGk3bh6qcvc3ou1QWIyfIF2qj83jfRs8!/b&bo=KgJIAwAAAAARF0M!&rf=viewer_4",
                 text: "这是我们第一次一起拍写真"
             }, {
                 src: "https://m.qpic.cn/psc?/V12Q4QsT06MLFa/Mh4X5JDG18yu8hANyA15N5uf6X.gaHbVOyr75mOZeYGsbNDkiUP*ZHQjeyi9ncyx3RE59KjMT9xlGAYBv6GElXYujPdOmBMfVhkcGyIPXt0!/b&bo=oAU4BAAAAAARF7k!&rf=viewer_4",
                 text: "床上私房照，哈哈哈不能泄露"
+            }, {
+                src: "https://m.qpic.cn/psc?/V12Q4QsT06MLFa/Mh4X5JDG18yu8hANyA15N99ASgHo43w2RmLzr0B6dvVLQAjMrcLIFkMFVQoBE256rvseaxTKRuwwsb1tBzAXlJUyjZsaqhjL46AZOX0LuO8!/b&bo=PgTEAgAAAAARF9w!&rf=viewer_4",
+                text: "这张照片太有感觉了~"
+            }, {
+                src: "https://m.qpic.cn/psc?/V12Q4QsT35EKsy/Mh4X5JDG18yu8hANyA15N79.rEakkkLcLesD0rUvi3wJJ8tbWWK1BFq7wSft6yAphrz8GsVtw9biThgncE6nhlVxbo1YkACRDiqDmJDBpt4!/b&bo=YASQBgAAAAARF9I!&rf=viewer_4",
+                text: "搂着你的小蛮腰"
             }, ],
             cover: 'https://m.qpic.cn/psc?/V12Q4QsT1WaafM/*.mI3yPYPF*NtvOuCb0eDENGk*M4c4qtPSzO15bP1i3JPSFmvVSCtQLnaA.fzOFroS8t1gTUFqZRRukBGHafJQ!!/b&bo=OASgBQAAAAARB6k!&rf=viewer_4&t=5'
         }
     },
     onLoad() {
-        const backgroundAudioManager = wx.getBackgroundAudioManager()
-        console.log(backgroundAudioManager);
-        backgroundAudioManager.title = '送给sofia的礼物'
-        backgroundAudioManager.epname = '送给sofia的礼物'
-        backgroundAudioManager.singer = '大宝'
-        backgroundAudioManager.coverImgUrl = this.cover
-            // 设置了 src 之后会自动播放
-        backgroundAudioManager.src = 'https://webfs.yun.kugou.com/202005160329/316322ed909904c083307e4a7cb60ce0/G159/M05/1B/03/f5QEAFySkI-AE6uOACiHro6UphQ692.mp3'
+        // const backgroundAudioManager = wx.getBackgroundAudioManager()
+        // backgroundAudioManager.title = '送给sofia的礼物'
+        // backgroundAudioManager.epname = '送给sofia的礼物'
+        // backgroundAudioManager.singer = '大宝'
+        // backgroundAudioManager.coverImgUrl = this.cover
+        //     // 设置了 src 之后会自动播放
+        // backgroundAudioManager.src = ''
+
+        // 设置背景音乐
+        // let music = "http://114.80.26.158/amobile.music.tc.qq.com/C400003pXpmI1VRyly.m4a?guid=812222401&vkey=1CD62C9195034DDE76CF1A5930A5B6C8F6010ED6839E86CBAECD61CB1E111B6D5F8A9F8D8096C7B4E0EB8BCAD7A83D31F49F23AA75F25287&uin=4126&fromtag=66"
+        // // 歌手：music.artistsname
+        // wx.playBackgroundAudio({
+        //     dataUrl: music,
+        //     title: '送给sofia的礼物',
+        //     coverImgUrl: this.cover,
+        //     fail: function(a) {
+        //         console.log(a);
+        //     },
+        // })
     },
     onShow() {},
     mounted() {
@@ -62,9 +74,13 @@ export default {
     },
     methods: {
         goHome() {
-            wx.switchTab({
-                url: '/pages/home/index'
-            })
+            this.hide = true
+            setTimeout(() => {
+                wx.switchTab({
+                    url: '/pages/home/index'
+                })
+            }, 600)
+
         },
         imgClick(index) {
             wx.showToast({

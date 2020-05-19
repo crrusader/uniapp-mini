@@ -9,6 +9,12 @@
         position: relative;
         background-image: url('https://www.assdrty.com/images/2020/05/16/0077qhzWly1fq7tvv7yipg30dc0loqv6.gif');
         background-attachment: fixed;
+        transition: opacity 0.6s;
+        opacity: 1;
+
+        &.opacity {
+            opacity: 0;
+        }
 
         .swiper {
             width: 100%;

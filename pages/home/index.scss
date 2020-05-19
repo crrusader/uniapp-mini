@@ -38,8 +38,72 @@
     font-size: 28upx;
 
     .title {
-      text-align: left;
+        text-align: left;
+        // border-top: 1px dashed silver;
+        // padding-top: 15px;
+        margin-top: 15px;
+
+        &:first-child {
+            padding-top: 0;
+            margin-top: 0;
+            border-top: none;
+        }
     }
 
-    .content {}
+    .content {
+        margin: 15px 0;
+        text-align: left;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        position: relative;
+
+        .tips {
+            position: absolute;
+            background: #fff;
+            padding: 5px;
+            border-radius: 15px;
+            font-size: 22upx;
+            color: #1b1b1b;
+            top: 4upx;
+
+            &.one {}
+
+            &.two {
+                left: 248upx;
+            }
+
+            &.three {
+                left: 492upx;
+            }
+
+            &.first {
+                top: 4upx;
+            }
+
+            &.second {
+                top: 248upx;
+            }
+        }
+
+        &.more {
+            .poster {
+                margin-bottom: 44upx;
+            }
+        }
+
+        .poster {
+            width: 200upx;
+            height: 200upx;
+            margin-right: 44upx;
+
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+
+            &.rotate {
+                transform: rotateX(180deg);
+            }
+        }
+    }
 }
