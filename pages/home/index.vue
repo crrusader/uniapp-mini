@@ -193,6 +193,8 @@
                 <image :src="imglist[56]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[58]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[59]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
+                <view class="tips two">玉体横陈</view>
+                <view class="tips three">好看</view>
             </view>
             <!-- 21 -->
             <view class="title">
@@ -230,14 +232,6 @@
             <view class="content">
                 <image :src="imglist[67]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[68]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
-            </view>
-            <!-- 24 -->
-            <view class="title">
-                跟你也是第一次去摘草莓，嘿嘿
-            </view>
-            <view class="content">
-                <image :src="imglist[72]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
-                <image :src="imglist[73]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
             </view>
             <!-- 25 -->
             <view class="title">
@@ -278,13 +272,13 @@
             <view class="content">
                 <image :src="imglist[83]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[84]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
-                <image :src="imglist[85]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
             </view>
             <!-- 29 -->
             <view class="title">
                 我们又一次一起团建啦，去爬山and漂流
             </view>
             <view class="content">
+                <image :src="imglist[85]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[86]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[87]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
             </view>
@@ -293,8 +287,8 @@
                 第一次见到你的闺蜜们，说实话刚开始有点怂，见了面之后就不怂了哈哈哈
             </view>
             <view class="content">
+                <image :src="imglist[88]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[89]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
-                <image :src="imglist[90]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
             </view>
             <!-- 31 -->
             <view class="title">
@@ -303,13 +297,13 @@
             <view class="content">
                 <image :src="imglist[93]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[94]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
-                <image :src="imglist[95]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
             </view>
             <!-- 32 -->
             <view class="title">
                 赶在夏天的尾巴跟你一起去呼伦贝尔大草原上撒欢
             </view>
             <view class="content more">
+                <image :src="imglist[95]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[97]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[98]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
                 <image :src="imglist[99]" mode="aspectFill" class="poster" lazy-load="true" @click="imgClick" />
