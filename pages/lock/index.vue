@@ -7,9 +7,8 @@
     </block>
     <block v-else>
         <view>
-            <text>可爱的小粽子啊</text>
-            <view></view>
-            <view v-for="(item,index) in sweet">{{item}}</view>
+            <view>专属订阅</view>
+            <view v-for="(item,index) in sweet" :key="index">{{item}}</view>
         </view>
     </block>
 </view>
@@ -19,7 +18,7 @@
 export default {
     data() {
         return {
-            title: 'Lock Area',
+            title: 'Lock Area Enter Your Password!',
             pwd: '',
             hide: true,
             sweet: [],
@@ -35,11 +34,10 @@ export default {
     },
     methods: {
         async confirm() {
-            if (this.pwd == '123456') {
+            if (this.pwd == '960614') {
                 this.hide = false
                 this.timer = setInterval(async () => {
-                    let res = await this.$store.dispatch('Api/getLoveWord') // 接口调不通 未接入icp备案
-                    this.sweet.push(res.data)
+                    this.sweet.push(1)
                 }, 2000)
             }
         },

@@ -5,9 +5,9 @@
             {{item.name}}
         </view>
     </view>
-    <scroll-view scroll-y :class="{'scrollTop': scrollTop}" @scrolltolower="scrollBottom" :style="{ 'padding-top': `${fixedTop}px` }">
+    <scroll-view scroll-y :class="{'scrollTop': scrollTop}" :style="{ 'padding-top': `${fixedTop}px` }">
         <block v-if="list.length > 0">
-            <jokeList />
+            123
         </block>
         <block v-else>
             <text>今天就到此为止吧~</text>
@@ -21,7 +21,6 @@ import {
     mapState,
 } from "vuex";
 
-import jokeList from "@/components/page-components/home/jokelist/index";
 import safeArea from "@/components/common/mixins/safe-area";
 
 export default {
@@ -33,33 +32,11 @@ export default {
             fixedTop: 64,
             navbarheight: 44, // 小程序右上角占据高度
             tabs: [{
-                    name: "全部类型",
+                    name: "今日天气",
                     status: "all",
-                },
-                {
-                    name: "视频",
-                    status: "video",
-                },
-                {
-                    name: "图片",
-                    status: "image",
-                },
-                {
-                    name: "动态图",
-                    status: "gif",
-                },
-                {
-                    name: "文字",
-                    status: "text",
                 },
             ],
         }
-    },
-    components: {
-        jokeList,
-    },
-    onLoad() {
-        this.getJoke()
     },
     mounted() {
         this.$nextTick(() => {
@@ -70,22 +47,12 @@ export default {
         })
     },
     computed: {
-        ...mapState('Home', ['scrollTop', 'list']),
+        ...mapState('Home', ['scrollTop']),
     },
     methods: {
-        async getJoke() {
-            let res = await this.$store.dispatch('Home/getJoke', {
-                type: this.status,
-            })
-        },
         //改变查询状态
         setStatus(status) {
             this.status = status;
-            this.$store.commit('Home/setType', status)
-            this.getJoke();
-        },
-        scrollBottom() {
-            this.$store.dispatch('Home/getNextJoke')
         },
     },
 }
