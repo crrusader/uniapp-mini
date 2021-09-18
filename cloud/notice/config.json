@@ -1,0 +1,16 @@
+{
+    "permissions": {
+        "openapi": [
+            "templateMessage.send",
+            "templateMessage.addTemplate",
+            "templateMessage.deleteTemplate"
+        ]
+    },
+    "triggers": [
+        {
+            "name": "myTimer",
+            "type": "timer",
+            "config": "*/30 * * * * * *"
+        }
+    ]
+}

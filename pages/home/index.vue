@@ -10,6 +10,7 @@
             123
         </block>
         <block v-else>
+            <button @click="send">推送</button>
             <text>今天就到此为止吧~</text>
         </block>
     </scroll-view>
@@ -50,6 +51,27 @@ export default {
         ...mapState('Home', ['scrollTop']),
     },
     methods: {
+        send() {
+            wx.requestSubscribeMessage({
+                tmplIds: ['JZQVqJmFNO_DMAsor9Rc1Un8AtX6ACZU_VPY4VP8uj4'],
+                success (res) {
+                    // // 测试云函数
+                    // wx.cloud.callFunction({
+                    //     name: 'notice',
+                    //     data: {
+                            
+                    //     },
+                    //     success(res) {
+                    //         console.log('成功', res)
+                    //     },
+                    //     fail(res) {
+                    //         console.log('失败', res);
+                    //     }
+                    // })
+                }
+            })
+            
+        },
         //改变查询状态
         setStatus(status) {
             this.status = status;

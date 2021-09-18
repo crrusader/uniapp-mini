@@ -1,7 +1,11 @@
 <script>
 export default {
     onLaunch: function() {
-        console.log('App Launch')
+        console.log('App Launch',process.env.NODE_ENV,process.env)
+        wx.cloud.init({
+            env: "dev-9gvzmx68c1ee405c",
+            traceUser: true,
+        })
     },
     onShow: function() {
         console.log('App Show')
