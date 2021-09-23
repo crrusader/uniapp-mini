@@ -12,6 +12,8 @@ async function sendTemplateMessage(event) {
         OPENID
     } = cloud.getWXContext()
 
+    console.log(OPENID, 'OPENID');
+
     let datas = {
         "templateId": "JZQVqJmFNO_DMAsor9Rc1Un8AtX6ACZU_VPY4VP8uj4",
         "data": {
@@ -30,7 +32,7 @@ async function sendTemplateMessage(event) {
     const sendResult = await cloud.openapi.subscribeMessage.send({
         // zxz: "oCYBL5OG46Km0wtiCmojbhtEkyCQ",
         // bhl: "oCYBL5B6Fn_EX6euGPOlkCMAag_4",
-        touser: 'oCYBL5OG46Km0wtiCmojbhtEkyCQ' || OPENID,
+        touser: 'oCYBL5B6Fn_EX6euGPOlkCMAag_4' || OPENID,
         templateId: datas.templateId,
         // page: 'pages/home/index',
         data: datas.data
