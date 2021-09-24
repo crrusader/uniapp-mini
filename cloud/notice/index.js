@@ -34,7 +34,8 @@ async function sendTemplateMessage(event) {
         // bhl: "oCYBL5B6Fn_EX6euGPOlkCMAag_4",
         touser: 'oCYBL5B6Fn_EX6euGPOlkCMAag_4' || OPENID,
         templateId: datas.templateId,
-        // page: 'pages/home/index',
+        page: 'pages/home/index',
+        miniprogram_state: 'trial',
         data: datas.data
     })
     return sendResult

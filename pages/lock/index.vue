@@ -37,7 +37,7 @@ export default {
             if (this.pwd == '960614') {
                 this.hide = false
                 this.timer = setInterval(async () => {
-                    this.sweet.push(1)
+                    this.sweet.push(new Date().toLocaleString())
                 }, 2000)
             }
         },

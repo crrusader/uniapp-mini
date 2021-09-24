@@ -10,7 +10,7 @@
         {
             "name": "myTimer",
             "type": "timer",
-            "config": "0 0 13 * * * *"
+            "config": "0 0 11,13 * * * *"
         }
     ]
 }

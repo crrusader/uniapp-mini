@@ -7,13 +7,13 @@
     }, {
         "path": "pages/lock/index",
         "style": {
-            "navigationStyle": "custom",
-            "enablePullDownRefresh": true
+            "navigationStyle": "custom"
         }
     }, {
         "path": "pages/account/index",
         "style": {
-            "navigationStyle": "custom"
+            "navigationStyle": "custom",
+            "enablePullDownRefresh": true
         }
     }],
     "subPackages": [{
