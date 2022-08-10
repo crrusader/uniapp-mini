@@ -6,6 +6,13 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "14820628",
+      "name": "拖拽",
+      "font_class": "tuozhuai",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
       "icon_id": "10596431",
       "name": "filter-line",
       "font_class": "filter-line",

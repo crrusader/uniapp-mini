@@ -1,40 +1,77 @@
 .wrap {
     text-align: center;
     position: relative;
+    padding-top: 0;
+}
 
-    .tab {
-        height: upx(40);
-        line-height: upx(40);
-        border-top: 1px solid #E4E4E4;
-        border-bottom: 1px solid #E4E4E4;
-        background: #fff;
-        text-align: center;
-        display: flex;
-        justify-content: space-around;
-        position: fixed;
-        width: 100%;
-        z-index: 2;
+#myMap {
+    width: 100%;
+    height: 100vh;
+}
 
-        .tab-item {
-            color: #0e0e0e;
-            font-size: upx(12);
+.vsbar {
+    position: fixed;
+    left: 20px;
+    top: 60px;
+    z-index: 1;
+    width: 0;
+    transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
 
-            &.active {
-                font-weight: bold;
+    .wrap {
+        background: transparent;
+        pointer-events: none;
+        padding: upx(10) 0;
+        transition: all 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+
+        button {
+            white-space: nowrap;
+            padding: 0;
+            margin-bottom: upx(10);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .a,
+        .b,
+        .c,
+        .d {
+            display: none;
+        }
+
+        &.a {
+            .a {
+                display: block;
+            }
+        }
+        &.b {
+            .b {
+                display: block;
+                height: upx(300);
+                overflow: scroll;
+                text-align: left;
+            }
+        }
+        &.c {
+            .c {
+                display: block;
+            }
+        }
+        &.d {
+            .d {
+                display: block;
             }
         }
     }
 
-    scroll-view {
-        position: fixed;
-        z-index: 1;
-        height: 100%;
-        width: 100%;
-        top: 0;
-        left: 0;
+    &.opened {
+        width: upx(335);
 
-        &.scrollTop {
-            height: auto;
+        .wrap {
+            background: #fff;
+            pointer-events: all;
+            padding: upx(10);
         }
     }
 }
