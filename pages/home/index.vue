@@ -113,6 +113,7 @@ export default {
           dottedLine: false,
         },
       ],
+      clickMarkerId: null,
     };
   },
   mounted() {},
@@ -203,14 +204,15 @@ export default {
       const targetDot = this.markers.find(
         (item) => item.id === e.detail.markerId
       );
-      if (targetDot) {
+      if (targetDot && this.clickMarkerId === targetDot.id) {
         wx.openLocation({
           latitude: targetDot.latitude,
           longitude: targetDot.longitude,
           name: targetDot.label.content,
-          address: targetDot.callout.content || 'GO GO GO !!!',
+          address: targetDot.callout.content || "GO GO GO !!!",
         });
       }
+      this.clickMarkerId = e.detail.markerId;
     },
     /**
      * 打开每日攻略时出现swiper
