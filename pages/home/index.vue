@@ -82,6 +82,7 @@
       :polyline="polyline"
       :markers="markers"
       :scale="scale"
+      @markertap="markertap"
       @regionchange="regionchange"
     ></map>
   </view>
@@ -198,6 +199,24 @@ export default {
         this[dialog] = true;
       }
     },
+    markertap(e) {
+      const targetDot = this.markers.find(
+        (item) => item.id === e.detail.markerId
+      );
+      if (targetDot) {
+        wx.openLocation({
+          latitude: targetDot.latitude,
+          longitude: targetDot.longitude,
+          name: targetDot.label.content,
+          address: targetDot.callout.content || 'GO GO GO !!!',
+        });
+      }
+    },
+    /**
+     * 打开每日攻略时出现swiper
+     * 滚动展示每一天行程安排
+     * 并且滑动的时候去到对应的绘制路线
+     */
   },
 };
 </script>
