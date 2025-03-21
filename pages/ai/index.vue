@@ -26,7 +26,7 @@
       maxlength="-1"
       :disabled="loading"
       class="form-textarea"
-      placeholder="输入提示词:描述画面中需要出现的内容"
+      placeholder="输入提示词[prompt]:描述画面中需要出现的内容"
       v-model.trim="prompt"
       name="textarea"
     />
@@ -231,7 +231,7 @@ export default {
     },
     // 开始绘画
     async bindFormSubmit() {
-      if (!this.prompt) {
+      if (!this.prompt && !this.img) {
         wx.showToast({
           title: "请输入提示词",
           icon: "error",
@@ -256,7 +256,7 @@ export default {
 
       let { data: res } = await this.$store.dispatch("Api/startDraw", {
         modelStyleId: this.array[this.index]?.code || 1,
-        prompt: this.prompt,
+        prompt: this.prompt || undefined,
         negativePrompt: this.negativePrompt || undefined,
         batchSize: this.batchSize,
         detailsLevel: this.detailsLevel,

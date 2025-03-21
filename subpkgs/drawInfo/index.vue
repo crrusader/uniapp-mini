@@ -11,8 +11,8 @@
         v-for="(item, index) in historyDraw"
         :key="index"
       >
-        <view class="item-prompt"> 提示词：{{ item.taskPrompt }} </view>
-        <view class="item-id"> 绘画ID：{{ item.taskId }} </view>
+        <view class="item-prompt"> 提示词：{{ item.taskPrompt || "-" }} </view>
+        <view class="item-id"> 绘画ID：{{ item.taskId || "-" }} </view>
       </view>
       <view class="empty" v-if="historyDraw.length === 0">
         暂无历史绘画记录
