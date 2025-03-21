@@ -1,0 +1,83 @@
+.wrap {
+    text-align: center;
+    padding: upx(100) upx(16) upx(25);
+
+    .account-info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: upx(10);
+
+        .account-balance {
+            display: inline-block;
+        }
+        .account-used {
+            color: red;
+            display: inline-block;
+        }
+    }
+
+    .uni-list {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-bottom: upx(10);
+
+        .uni-list-cell-left {
+            margin-right: upx(4);
+        }
+    }
+
+    .form-textarea {
+        width: 100%;
+        text-align: left;
+        height: upx(80);
+        padding: upx(6);
+        margin-bottom: upx(10);
+        border-radius: upx(5);
+        border: upx(1) solid #eee;
+    }
+
+    button {
+        margin-bottom: upx(10);
+        font-size: upx(14);
+
+        &.draw {
+            background: cornflowerblue;
+            color: #fff;
+        }
+    }
+
+    .img-wrap {
+        width: 100%;
+        display: flex;
+        font-size: upx(12);
+        white-space: nowrap;
+        align-items: center;
+        .img {
+            height: upx(80);
+            border: upx(1) solid #eee;
+            margin-left: upx(4);
+        }
+    }
+
+    .detailsLevel {
+        display: flex;
+        align-items: center;
+        font-size: upx(12);
+
+        slider {
+            flex: 1;
+            // transform: scale(0.7);
+            transform-origin: left;
+        }
+    }
+
+    .mb10 {
+        margin-bottom: upx(10);
+    }
+
+    .mt10 {
+        margin-top: upx(10);
+    }
+}

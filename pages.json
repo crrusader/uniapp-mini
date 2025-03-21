@@ -1,6 +1,6 @@
 {
     "pages": [{
-        "path": "pages/home/index",
+        "path": "pages/ai/index",
         "style": {
             "navigationStyle": "custom"
         }
@@ -23,11 +23,13 @@
             "style": {
                 "navigationStyle": "custom"
             }
+        }, {
+            "path": "drawInfo/index"
         }]
     }],
     "requiredBackgroundModes": ["audio"],
     "preloadRule": {
-        "pages/home/index": {
+        "pages/ai/index": {
             "network": "all",
             "packages": []
         }
@@ -36,18 +38,19 @@
         "backgroundColor": "#fff",
         "color": "#8a8a8a",
         "selectedColor": "#000",
-        "list": [{
-                "text": "首页",
-                "pagePath": "pages/home/index",
-                "iconPath": "static/home.png",
-                "selectedIconPath": "static/home_select.png"
-            },
-            /*{
-                "text": "副本1",
-                "pagePath": "pages/home/index",
+        "list": [
+            // {
+            //     "text": "首页",
+            //     "pagePath": "pages/home/index",
+            //     "iconPath": "static/home.png",
+            //     "selectedIconPath": "static/home_select.png"
+            // },
+            {
+                "text": "文生图",
+                "pagePath": "pages/ai/index",
                 "iconPath": "static/wind-cry.png",
                 "selectedIconPath": "static/wind-smile.png"
-            },*/
+            },
             {
                 "text": "锁定",
                 "pagePath": "pages/lock/index",

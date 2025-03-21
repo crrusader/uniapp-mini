@@ -45,6 +45,27 @@ export default {
             let res = await rootState.getRequest(api.wallpaper)
             return res
         },
+        /**
+         * 开始文生图
+         */
+        async startDraw({ dispatch, commit, state, rootState }, data) {
+          let res = await rootState.postRequest(api.startDraw, data);
+          return res;
+        },
+        /**
+         * 查询生成结果
+         */
+        async queryDraw({ dispatch, commit, state, rootState }, data) {
+          let res = await rootState.postRequest(api.queryDraw, data);
+          return res;
+        },
+        /**
+         * 获取当前账户详情以及积分情况
+         */
+        async queryClientInfo({ dispatch, commit, state, rootState }, data) {
+          let res = await rootState.getRequest(api.queryClientInfo);
+          return res;
+        },
     },
     namespaced: true
 }

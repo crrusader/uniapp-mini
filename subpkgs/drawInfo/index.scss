@@ -1,0 +1,31 @@
+.wrap {
+    padding: upx(10);
+
+    .tip {
+        color: red;
+        font-size: upx(12);
+        margin-bottom: upx(12);
+    }
+
+    .historyList {
+        .item {
+            margin-bottom: upx(10);
+            border-radius: upx(6);
+            padding: upx(6);
+            background: #333;
+            color: #fff;
+            font-size: upx(12);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            .item-prompt {
+                margin-bottom: upx(4);
+            }
+        }
+    }
+
+    .empty {
+        font-size: upx(12);
+    }
+}
